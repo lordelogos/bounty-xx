@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import { NavBar } from "../nav";
-import { Box } from "@chakra-ui/react";
+import { Nav } from "../nav";
+import { Footer } from "../footer";
+import { Box, Flex } from "@chakra-ui/react";
 
 type BaseLayoutProps = {
   children: ReactNode;
@@ -8,9 +9,12 @@ type BaseLayoutProps = {
 
 export const BaseLayout = ({ children }: BaseLayoutProps) => {
   return (
-    <Box as="main" h={"100%"}>
-      <NavBar />
-      {children}
-    </Box>
+    <Flex as="main" direction={"column"} h={"100dvh"}>
+      <Nav />
+      <Box as="section" flex={1}>
+        {children}
+      </Box>
+      <Footer />
+    </Flex>
   );
 };

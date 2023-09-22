@@ -31,12 +31,12 @@ const NAV_LINKS: NavItemProps[] = [
   },
 ];
 
-export const NavBar = () => {
+export const Nav = () => {
   return (
     <Grid
+      as={"nav"}
       templateColumns={"repeat(5, 1fr)"}
       gap={8}
-      height={68}
       py={"13.5px"}
       bg={"#FFFFFF"}
       borderBottom={"2px solid #EBEBEB"}
