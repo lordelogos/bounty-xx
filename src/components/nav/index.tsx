@@ -1,9 +1,17 @@
-import { Grid, GridItem, IconProps, Link } from "@chakra-ui/react";
+import {
+  Avatar,
+  Button,
+  Grid,
+  GridItem,
+  IconProps,
+  Link,
+} from "@chakra-ui/react";
 import { NavLink as ReactRouterNavLink } from "react-router-dom";
 import { ComponentType } from "react";
 import { HomeIcon } from "@ui/icons/home-icon";
 import { PaymentIcon } from "@ui/icons/payment-icon";
 import { ChannelIcon } from "@ui/icons/channel-icon";
+import { BellIcon } from "@ui/icons/bell-icon";
 
 const NAV_LINKS: NavItemProps[] = [
   {
@@ -25,7 +33,14 @@ const NAV_LINKS: NavItemProps[] = [
 
 export const NavBar = () => {
   return (
-    <Grid templateColumns={"repeat(5, 1fr)"} gap={8} height={68} py={"13.5px"}>
+    <Grid
+      templateColumns={"repeat(5, 1fr)"}
+      gap={8}
+      height={68}
+      py={"13.5px"}
+      bg={"#FFFFFF"}
+      borderBottom={"2px solid #EBEBEB"}
+    >
       <GridItem
         gridColumn={"2/ span 3"}
         display={"flex"}
@@ -36,7 +51,17 @@ export const NavBar = () => {
           <NavItem key={index} {...navLink} />
         ))}
       </GridItem>
-      <GridItem gridColumn={"5"} bg="blue"></GridItem>
+      <GridItem
+        gridColumn={"5"}
+        display={"flex"}
+        alignItems={"center"}
+        gap={"10px"}
+      >
+        <Button w="40px" h="40px" variant={"outline"} rounded={"full"}>
+          <BellIcon />
+        </Button>
+        <Avatar src="/profile.jpg" name="User" w="40px" h="40px" />
+      </GridItem>
     </Grid>
   );
 };
