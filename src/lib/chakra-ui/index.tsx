@@ -6,6 +6,9 @@ export const theme = extendTheme({
       "html, body": {
         fontFamily: `'Ubuntu', sans-serif`,
       },
+      "a.active": {
+        color: "rgba(231, 29, 54, 1)",
+      },
     },
   },
 });
