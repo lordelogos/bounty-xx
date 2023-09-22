@@ -1,3 +1,9 @@
+import { BaseLayout } from "@/components/layouts/base-layout";
+
 export const TaskBoard = () => {
-  return <div>Hello World</div>;
+  return (
+    <BaseLayout>
+      <div>Hello World</div>
+    </BaseLayout>
+  );
 };

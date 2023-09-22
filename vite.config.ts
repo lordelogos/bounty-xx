@@ -10,6 +10,12 @@ export default defineConfig({
         find: "@",
         replacement: fileURLToPath(new URL("./src", import.meta.url)),
       },
+      {
+        find: "@ui",
+        replacement: fileURLToPath(
+          new URL("./src/components/ui", import.meta.url)
+        ),
+      },
     ],
   },
   plugins: [react()],
