@@ -4,7 +4,7 @@ This project was setup using React + TypeScript + Vite
 
 ### Missing Workflow
 
-- Submissions
+- [Submissions](/src/pages/bounty-submission.tsx)
 
 ### Technologies used
 

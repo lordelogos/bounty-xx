@@ -7,9 +7,15 @@ const { definePartsStyle, defineMultiStyleConfig } =
 const baseStyle = definePartsStyle({
   thumb: {
     bg: "rgb(238, 109, 124)",
+    _checked: {
+      bg: "rgb(250, 250, 250)",
+    },
   },
   track: {
     bg: "rgb(248, 228, 220)",
+    _checked: {
+      bg: "rgb(238, 109, 124)",
+    },
   },
 });
 
