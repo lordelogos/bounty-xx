@@ -17,6 +17,11 @@ export const switchTheme = defineMultiStyleConfig({ baseStyle });
 
 export const theme = extendTheme({
   components: { Switch: switchTheme },
+  colors: {
+    brand: {
+      500: "#E71D36",
+    },
+  },
   styles: {
     global: {
       "html, body": {
