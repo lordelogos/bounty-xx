@@ -1,7 +1,7 @@
 import { BaseLayout } from "@/components/layouts/base-layout";
-import { TaskBoardContent } from "@/components/task-board-content";
-import { TaskBoardHeader } from "@/components/task-board-header";
-import { TaskBoardSummary } from "@/components/task-board-summary";
+import { TaskBoardContent } from "@/components/page-specific/task-board-content";
+import { TaskBoardHeader } from "@/components/page-specific/task-board-header";
+import { TaskBoardSummary } from "@/components/page-specific/task-board-summary";
 import { Switch } from "@/components/ui/switch";
 import { Container, Flex, Text } from "@chakra-ui/react";
 

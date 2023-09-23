@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { Nav } from "../nav";
-import { Footer } from "../footer";
+import { Nav } from "../general/nav";
+import { Footer } from "../general/footer";
 import { Box, BoxProps, Flex } from "@chakra-ui/react";
 
 type BaseLayoutProps = {

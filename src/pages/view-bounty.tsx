@@ -1,7 +1,7 @@
-import { BountyDescription } from "@/components/bounty-description";
-import { BountyDetails } from "@/components/bounty-summary";
+import { BountyDescription } from "@/components/page-specific/bounty-description";
+import { BountyDetails } from "@/components/page-specific/bounty-summary";
 import { BaseLayout } from "@/components/layouts/base-layout";
-import { TaskBoardHeader } from "@/components/task-board-header";
+import { TaskBoardHeader } from "@/components/page-specific/task-board-header";
 import { Breadcrumb, BreadcrumbItem } from "@/components/ui/breadcrumb";
 import { ChevronRightIcon } from "@/components/ui/icons/chevron-right-icon";
 import { Button, Container, Flex, Grid, GridItem } from "@chakra-ui/react";
