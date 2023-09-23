@@ -1,5 +1,5 @@
 import { Grid, GridItem } from "@chakra-ui/react";
-import { Card } from "@ui/card";
+import { SummaryCard } from "@/components/ui/cards/summary-card";
 
 const SUMMARY_CARDS = [
   { heading: "$0.00", body: "Total Earnings" },
@@ -12,7 +12,7 @@ export const TaskBoardSummary = () => {
     <Grid templateColumns={"repeat(3, 1fr)"} gap={"20px"} paddingTop={"20px"}>
       {SUMMARY_CARDS.map((summaryCard, index) => (
         <GridItem key={index}>
-          <Card {...summaryCard} />
+          <SummaryCard {...summaryCard} />
         </GridItem>
       ))}
     </Grid>

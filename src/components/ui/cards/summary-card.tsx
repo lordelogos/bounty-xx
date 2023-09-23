@@ -1,18 +1,13 @@
-import {
-  Card as CardPrimitive,
-  CardBody,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
+import { Card, CardBody, Heading, Text } from "@chakra-ui/react";
 
-type CardProps = {
+type SummaryCardProps = {
   heading: string;
   body: string;
 };
 
-export const Card = ({ heading, body }: CardProps) => {
+export const SummaryCard = ({ heading, body }: SummaryCardProps) => {
   return (
-    <CardPrimitive rounded={"lg"} bg={"#060606"} color={"#FFFFFF"}>
+    <Card rounded={"lg"} bg={"#060606"} color={"#FFFFFF"}>
       <CardBody
         p={"20px 30px"}
         display={"flex"}
@@ -22,6 +17,6 @@ export const Card = ({ heading, body }: CardProps) => {
         <Heading size={"md"}>{heading}</Heading>
         <Text fontSize={"xs"}>{body}</Text>
       </CardBody>
-    </CardPrimitive>
+    </Card>
   );
 };
