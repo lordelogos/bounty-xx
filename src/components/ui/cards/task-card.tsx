@@ -73,22 +73,43 @@ export const TaskCard = ({
             </Badge>
           ))}
         </Flex>
-        <Link to={href}>
-          <Button
-            bg={"#FFFFFF"}
-            border={"solid 1px #E71D36"}
-            color={"#E71D36"}
-            rounded={"full"}
-            width={"max-content"}
-            fontSize={"10px"}
-            fontWeight={"bold"}
-            p={"7px 7px 7px 13px"}
-            variant={"outline"}
-            rightIcon={<ChevronRightIcon />}
-          >
-            See Details
-          </Button>
-        </Link>
+        <Flex alignItems={"center"} gap={"11px"}>
+          <Link to={href}>
+            <Button
+              bg={"#FFFFFF"}
+              border={"solid 1px #E71D36"}
+              color={"#E71D36"}
+              rounded={"full"}
+              width={"max-content"}
+              fontSize={"10px"}
+              fontWeight={"bold"}
+              p={"7px 7px 7px 13px"}
+              variant={"outline"}
+              rightIcon={<ChevronRightIcon />}
+            >
+              See Details
+            </Button>
+          </Link>
+          <Link to={"/bounty/1/submission"}>
+            <Button
+              color={"#FFFFFF"}
+              border={"solid 1px #E71D36"}
+              bg={"#E71D36"}
+              rounded={"full"}
+              width={"max-content"}
+              fontSize={"10px"}
+              fontWeight={"bold"}
+              p={"7px 7px 7px 13px"}
+              variant={"outline"}
+              rightIcon={<ChevronRightIcon />}
+              _hover={{
+                bg: "rgba(231, 29, 54, .8)",
+              }}
+            >
+              Submit bounty
+            </Button>
+          </Link>
+        </Flex>
       </CardBody>
     </Card>
   );
