@@ -22,7 +22,11 @@ export const ViewBounty = () => {
         flexDirection={"column"}
         gap={"48px"}
       >
-        <Flex alignItems={"flex-start"} justifyContent={"space-between"}>
+        <Flex
+          flexDirection={["column", null, "row"]}
+          alignItems={"flex-start"}
+          justifyContent={"space-between"}
+        >
           <TaskBoardHeader title="View Bounty">
             <Breadcrumb>
               <BreadcrumbItem href={"/bounty"}>Product Bounty</BreadcrumbItem>
@@ -45,7 +49,7 @@ export const ViewBounty = () => {
             Accept
           </Button>
         </Flex>
-        <Grid templateColumns={"2fr 1fr"} gap={"14px"}>
+        <Grid templateColumns={["2fr", null, "2fr 1fr"]} gap={"14px"}>
           <GridItem display={"flex"} flexDirection={"column"} gap={"15px"}>
             <BountyDetails {...bounty} />
           </GridItem>

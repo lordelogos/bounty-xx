@@ -27,7 +27,7 @@ export const BountyDetails = ({
         <Badge
           bg={"rgba(6, 153, 85, 0.12)"}
           color={"rgba(6, 153, 85, 1)"}
-          fontSize={"sm"}
+          fontSize={["xs", null, "sm"]}
           p={"7px 5px"}
           borderRadius={"5px"}
         >
