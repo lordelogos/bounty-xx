@@ -5,6 +5,7 @@ import {
   GridItem,
   IconProps,
   Link,
+  Text,
 } from "@chakra-ui/react";
 import { NavLink as ReactRouterNavLink } from "react-router-dom";
 import { ComponentType } from "react";
@@ -84,7 +85,9 @@ export const NavItem = ({ name, href, icon: Icon }: NavItemProps) => {
       py={"10px"}
     >
       <Icon w={"20px"} h={"20px"} />
-      <span>{name}</span>
+      <Text as={"span"} fontSize={"xs"}>
+        {name}
+      </Text>
     </Link>
   );
 };
