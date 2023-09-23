@@ -37,25 +37,25 @@ export const Nav = (props: GridProps) => {
   return (
     <Grid
       as={"nav"}
-      templateColumns={"repeat(5, 1fr)"}
+      templateColumns={["repeat(3, 1fr)", null, "repeat(5, 1fr)"]}
       gap={8}
-      py={"13.5px"}
+      p={"13.5px 16px"}
       bg={"#FFFFFF"}
       borderBottom={"2px solid #EBEBEB"}
       {...props}
     >
       <GridItem
-        gridColumn={"2/ span 3"}
+        gridColumn={["1/ span 2", null, "2/ span 3"]}
         display={"flex"}
         alignItems={"center"}
-        justifyContent={"center"}
+        justifyContent={["start", null, "center"]}
       >
         {NAV_LINKS.map((navLink, index) => (
           <NavItem key={index} {...navLink} />
         ))}
       </GridItem>
       <GridItem
-        gridColumn={"5"}
+        gridColumn={[null, null, "5"]}
         display={"flex"}
         alignItems={"center"}
         gap={"10px"}
@@ -87,7 +87,7 @@ export const NavItem = ({ name, href, icon: Icon }: NavItemProps) => {
       py={"10px"}
     >
       <Icon w={"20px"} h={"20px"} />
-      <Text as={"span"} fontSize={"xs"}>
+      <Text as={"span"} fontSize={"xs"} display={["none", null, "block"]}>
         {name}
       </Text>
     </Link>
