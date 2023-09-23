@@ -3,6 +3,7 @@ import {
   Button,
   Grid,
   GridItem,
+  GridProps,
   IconProps,
   Link,
   Text,
@@ -17,7 +18,7 @@ import { BellIcon } from "@ui/icons/bell-icon";
 const NAV_LINKS: NavItemProps[] = [
   {
     name: "Task Board",
-    href: "/",
+    href: "/bounty",
     icon: HomeIcon,
   },
   {
@@ -32,7 +33,7 @@ const NAV_LINKS: NavItemProps[] = [
   },
 ];
 
-export const Nav = () => {
+export const Nav = (props: GridProps) => {
   return (
     <Grid
       as={"nav"}
@@ -41,6 +42,7 @@ export const Nav = () => {
       py={"13.5px"}
       bg={"#FFFFFF"}
       borderBottom={"2px solid #EBEBEB"}
+      {...props}
     >
       <GridItem
         gridColumn={"2/ span 3"}

@@ -9,12 +9,18 @@ type BaseLayoutProps = {
 
 export const BaseLayout = ({ children, ...rest }: BaseLayoutProps) => {
   return (
-    <Flex as="main" direction={"column"} h={"100dvh"}>
-      <Nav />
+    <Flex
+      as="main"
+      direction={"column"}
+      minHeight={"100dvh"}
+      h={"100%"}
+      position={"relative"}
+    >
+      <Nav position={"sticky"} top={"0"} left={"0"} zIndex={"2"} />
       <Box as="section" flex={1} {...rest}>
         {children}
       </Box>
-      <Footer />
+      <Footer position={"fixed"} bottom={"0"} left={"0"} zIndex={"2"} />
     </Flex>
   );
 };

@@ -65,7 +65,13 @@ const TASKS: TaskCardProps[] = [
 
 export const TaskBoardContent = () => {
   return (
-    <Grid templateColumns={"2fr 1fr"} gap={"14px"} pt={"26px"}>
+    <Grid
+      templateColumns={"2fr 1fr"}
+      gap={"14px"}
+      pt={"26px"}
+      pb={"80px"}
+      position={"relative"}
+    >
       <GridItem
         borderTop={"solid 1px #D4D4D4"}
         borderRight={"solid 1px #D4D4D4"}
@@ -79,7 +85,15 @@ export const TaskBoardContent = () => {
           <TaskCard key={index} {...task} />
         ))}
       </GridItem>
-      <GridItem display={"flex"} flexDirection={"column"}>
+      <GridItem
+        display={"flex"}
+        flexDirection={"column"}
+        height={"max-content"}
+        gap={"20px"}
+        position={"sticky"}
+        top={"89px"}
+        zIndex={"1"}
+      >
         <SearchInput />
         <SearchFilter />
       </GridItem>

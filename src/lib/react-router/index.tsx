@@ -4,7 +4,7 @@ import { ViewBounty } from "@/pages/view-bounty";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/bounty",
     element: <TaskBoard />,
   },
   {

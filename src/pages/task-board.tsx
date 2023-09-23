@@ -6,7 +6,7 @@ import { Container } from "@chakra-ui/react";
 
 export const TaskBoard = () => {
   return (
-    <BaseLayout marginX={"auto"} w={"100%"} pt={"30px"} overflow={"auto"}>
+    <BaseLayout marginX={"auto"} w={"100%"} pt={"30px"}>
       <Container maxW={"649px"}>
         <TaskBoardHeader />
         <TaskBoardSummary />
