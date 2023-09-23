@@ -26,6 +26,7 @@ export const TaskCard = ({
       display={"flex"}
       flexDirection={"column"}
       gap={"15px"}
+      boxShadow={"0px 5px 50px 0px rgba(56, 56, 56, 0.05)"}
     >
       <CardHeader
         display={"flex"}
