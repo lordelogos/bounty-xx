@@ -1,4 +1,5 @@
-import { BountyDetails } from "@/components/bounty-details";
+import { BountyDescription } from "@/components/bounty-description";
+import { BountyDetails } from "@/components/bounty-summary";
 import { BaseLayout } from "@/components/layouts/base-layout";
 import { TaskBoardHeader } from "@/components/task-board-header";
 import { Breadcrumb, BreadcrumbItem } from "@/components/ui/breadcrumb";
@@ -49,6 +50,7 @@ export const ViewBounty = () => {
             <BountyDetails {...bounty} />
           </GridItem>
         </Grid>
+        <BountyDescription />
       </Container>
     </BaseLayout>
   );
