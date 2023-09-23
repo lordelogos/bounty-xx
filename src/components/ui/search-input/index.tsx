@@ -15,6 +15,7 @@ export const SearchInput = () => {
         border={"none"}
         rounded={"full"}
         pl={"15px"}
+        bg={"#FFFFFF"}
       />
       <InputRightElement
         bg={"rgba(231, 29, 54, 0.10)"}
