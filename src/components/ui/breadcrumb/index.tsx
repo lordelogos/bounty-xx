@@ -5,6 +5,7 @@ import {
 } from "@chakra-ui/react";
 import { forwardRef } from "react";
 import { ChevronRightIcon } from "@ui/icons/chevron-right-icon";
+import { Link } from "react-router-dom";
 
 const Breadcrumb = forwardRef<
   React.ElementRef<typeof BreadcrumbPrimitive>,
@@ -22,12 +23,17 @@ const Breadcrumb = forwardRef<
 
 const BreadcrumbItem = forwardRef<
   React.ElementRef<typeof BreadcrumbItemPrimitive>,
-  React.ComponentPropsWithoutRef<typeof BreadcrumbItemPrimitive>
->(({ children, isCurrentPage, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof BreadcrumbItemPrimitive> & {
+    href: string;
+  }
+>(({ children, isCurrentPage, href, ...props }, ref) => (
   <BreadcrumbItemPrimitive ref={ref} isCurrentPage={isCurrentPage} {...props}>
     <BreadcrumbLinkPrimitive
+      as={Link}
+      to={href}
       color={isCurrentPage ? "#060606" : "#575757"}
       fontWeight={isCurrentPage ? "medium" : "normal"}
+      fontSize={"xs"}
     >
       {children}
     </BreadcrumbLinkPrimitive>
