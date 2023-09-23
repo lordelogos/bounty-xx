@@ -10,11 +10,16 @@ export const TaskBoard = () => {
     <BaseLayout marginX={"auto"} w={"100%"} pt={"30px"}>
       <Container maxW={"649px"}>
         <TaskBoardHeader title="Product Bounty">
-          <Flex alignItems={"center"} justifyContent={"space-between"}>
+          <Flex
+            flexDirection={["column", null, "row"]}
+            alignItems={["flex-start", null, "center"]}
+            gap={"8px"}
+            justifyContent={"space-between"}
+          >
             <Text fontSize={"xs"}>
               Get paid when you complete a bounty for any project
             </Text>
-            <Switch />
+            <Switch defaultChecked />
           </Flex>
         </TaskBoardHeader>
         <TaskBoardSummary />

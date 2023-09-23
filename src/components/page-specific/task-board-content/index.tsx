@@ -1,8 +1,9 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Heading } from "@chakra-ui/react";
 import { SearchInput } from "@ui/search-input";
 import { SearchFilter } from "@ui/search-filter";
 import { TaskCard as TaskCardProps } from "@/lib/types";
 import { TaskCard } from "@ui/cards/task-card";
+import { SearchFilterModal } from "@/components/ui/modals/search-filter";
 
 const TASKS: TaskCardProps[] = [
   {
@@ -66,17 +67,26 @@ const TASKS: TaskCardProps[] = [
 export const TaskBoardContent = () => {
   return (
     <Grid
-      templateColumns={"2fr 1fr"}
+      templateColumns={["2fr", null, "2fr 1fr"]}
       gap={"14px"}
       pt={"26px"}
       pb={"80px"}
       position={"relative"}
     >
       <GridItem
-        borderTop={"solid 1px #D4D4D4"}
-        borderRight={"solid 1px #D4D4D4"}
+        display={["flex", null, "none"]}
+        alignItems={"center"}
+        justifyContent={"space-between"}
+        gap={"16px"}
+      >
+        <Heading size={"md"}>Bounties</Heading>
+        <SearchFilterModal />
+      </GridItem>
+      <GridItem
+        borderTop={["none", null, "solid 1px #D4D4D4"]}
+        borderRight={["none", null, "solid 1px #D4D4D4"]}
         roundedTopRight={"10px"}
-        p={"20px 20px 0 0"}
+        p={["0", null, "20px 20px 0 0"]}
         display={"flex"}
         flexDirection={"column"}
         gap={"15px"}
@@ -86,7 +96,7 @@ export const TaskBoardContent = () => {
         ))}
       </GridItem>
       <GridItem
-        display={"flex"}
+        display={["none", null, "flex"]}
         flexDirection={"column"}
         height={"max-content"}
         gap={"20px"}

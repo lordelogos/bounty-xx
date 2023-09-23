@@ -9,7 +9,11 @@ const SUMMARY_CARDS = [
 
 export const TaskBoardSummary = () => {
   return (
-    <Grid templateColumns={"repeat(3, 1fr)"} gap={"20px"} paddingTop={"20px"}>
+    <Grid
+      templateColumns={["1fr", null, "repeat(3, 1fr)"]}
+      gap={"20px"}
+      paddingTop={"20px"}
+    >
       {SUMMARY_CARDS.map((summaryCard, index) => (
         <GridItem key={index}>
           <SummaryCard {...summaryCard} />

@@ -59,6 +59,7 @@ export const Nav = (props: GridProps) => {
         display={"flex"}
         alignItems={"center"}
         gap={"10px"}
+        justifyContent={["flex-end", null, "flex-start"]}
       >
         <Button w="40px" h="40px" variant={"outline"} rounded={"full"}>
           <BellIcon />

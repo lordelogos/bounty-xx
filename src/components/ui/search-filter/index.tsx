@@ -1,4 +1,4 @@
-import { Checkbox, Flex, Heading } from "@chakra-ui/react";
+import { Checkbox, Flex, FlexProps, Heading } from "@chakra-ui/react";
 
 const SEARCH_FILTERS = [
   "ecommerce",
@@ -18,9 +18,9 @@ const SEARCH_FILTERS = [
   "edtech",
 ];
 
-export const SearchFilter = () => {
+export const SearchFilter = (props: FlexProps) => {
   return (
-    <Flex flexDirection={"column"} gap={"22px"}>
+    <Flex flexDirection={"column"} gap={"22px"} {...props}>
       <Heading as="h3" fontSize={"sm"}>
         Filter by Industry
       </Heading>
