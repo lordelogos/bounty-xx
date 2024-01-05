@@ -4,7 +4,7 @@ This project was setup using React + TypeScript + Vite
 
 ### Technologies used
 
-- React: UI Framework
+- React-js: UI Framework
 
 - React-router-dom: Routing handler
 
