@@ -20,9 +20,9 @@ The project is broken into:
 
   - [Layouts](/src//components/layouts/): This contains the `layout` components for the pages
 
-  - [Page-specific](/src//components/page-specific/): This contains the major components used on specific pages (a.k.a `epics`).
+  - [Page-specific](/src//components/page-specific/): This contains the major components used on specific pages (`epics`).
 
-  - [UI](/src//components/ui/): This contains specific customized ui elements that are re-used over the application (a.k.a `atoms`)
+  - [UI](/src//components/ui/): This contains specific customized ui elements that are re-used over the application (`atoms`)
 
 - [Pages](/src/pages/): This contains the pages in the application
 
