@@ -1,6 +1,6 @@
 # Bounty Project
 
-This project was setup using React + TypeScript + Vite
+This project was setup using Vite (React + TypeScript)
 
 ### Technologies used
 
